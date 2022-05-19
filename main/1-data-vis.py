@@ -1,6 +1,5 @@
 import justpy as jp
 import pandas 
-from datetime import datetime
 from pytz import utc
 import matplotlib.pyplot as plt
 data = pandas.read_csv("./data/CC26Slack.csv" , parse_dates=["Date"])
@@ -9,6 +8,7 @@ data["Weekday"] = data["Date"].dt.strftime("%A")
 data["Daynumber"] = data["Date"].dt.strftime("%w")
 weekday_avrg = data.groupby(["Weekday","Daynumber"]).mean()
 weekday_avrg = weekday_avrg.sort_values("Daynumber")
+
 
 chart = """
 {
@@ -144,12 +144,15 @@ chart_Users = """
 """
 
 
+
 def app():
     web_page = jp.QuasarPage()
     #Quasar Division
     h2 = jp.QDiv(a=web_page,text ="CC26 SlackChat Analysis", classes = "text-h2 text-center q-pa-md")
     #HighCharts
     hc = jp.HighCharts(a=web_page, options=chart)
+    
+    
     #Changing data from HighCHarts python data structures 
     hc.options.xAxis.categories = list(daily_members_average["Date"].dt.strftime("%Y-%m-%d"))
     hc.options.yAxis.categories = list(daily_members_average["Total enabled membership"])
@@ -162,6 +165,7 @@ def app():
     hc2.options.xAxis.categories = list(weekday_avrg.index.get_level_values(0))
     hc2.options.yAxis.categories = list(daily_members_average["Total enabled membership"])
     hc2.options.series[0].data = list(weekday_avrg["Daily active members"])
+
     
     return web_page
 
