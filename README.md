@@ -25,12 +25,6 @@ Pandas Library
 Also used templates from Highcharts at
 https://www.highcharts.com/
 
-## Screenshots
-
-![App Screenshot](images\Screenshot 2022-06-22 at 14-10-53 JustPy.png?raw=true "First")
-
-![App Screenshot](images\Screenshot 2022-06-22 at 14-11-23 JustPy.png?raw=true "Second")
-
 ## Lessons Learned
 
 For this project I learned the basics of python and how versitile it can be.
