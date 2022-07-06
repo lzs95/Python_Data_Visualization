@@ -26,7 +26,8 @@ Also used templates from Highcharts at
 https://www.highcharts.com/
 
 ## Images
-![alt text]([https://github.com/images/Screenshot 2022-06-22 at 14-10-53 JustPy.pngimage.jpg](https://github.com/lzs95/Python_Data_Visualization/blob/main/images/Screenshot%202022-06-22%20at%2014-10-53%20JustPy.png)?raw=true)
+![img1](https://user-images.githubusercontent.com/86816779/177491416-d8ac5bbe-e156-458c-8d00-a46f26beb34b.png)
+![img2](https://user-images.githubusercontent.com/86816779/177491432-f41258cd-8942-47f9-9d86-22e67a4835fa.png)
 
 ## Lessons Learned
 
